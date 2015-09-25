@@ -107,15 +107,15 @@
 \node [above=0mm of te2, it] {(FERPA Concerns)};
 % -------------------------------------------------
 
-\draw [->,lcnorm] (p1.south)  |- (t1.west);
-\draw [->,lcnorm] (p2.south)  |- (t1.east);
-\draw [<-*,lcnorm] (p1.east)	  -| (t1.north);
-\draw [-,lcnorm] (p2.west) -- (p1.east) node [midway, above, it, black] {Unique per student};
+\draw [->,lcnorm] (p1.south) [rounded corners] |- (t1.west);
+\draw [->,lcnorm,rounded corners] (p2.south)  |- (t1.east);
+\draw [<-*,lcnorm,rounded corners] (p1.east)	  -| (t1.north);
+\draw [-,lcnorm,rounded corners] (p2.west) -- (p1.east) node [midway, above, it, black] {Unique per student};
 \path (t1.south) to node [near start, xshift=1em] {$y$} (p3); 
 \path (t1.south) to node [near start, xshift=1em, yshift=2.5em] {$n$} (p1);
 
-\draw [*->,lcnorm] (t2.east) -- (p5.west);
-\draw [->,lcnorm] (p5.north) |- (p4.east);
+\draw [*->,lcnorm,rounded corners] (t2.east) -- (p5.west);
+\draw [->,lcnorm,rounded corners] (p5.north) |- (p4.east);
 \path (t2.east) to node [near start, yshift=.75em] {$y$} (p5); 
 \path (t2.south) to node [near start, xshift=1em] {$n$} (te3);
 
