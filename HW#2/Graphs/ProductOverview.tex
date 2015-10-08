@@ -13,16 +13,36 @@
     node distance=3cm,
     database/.style={
       cylinder,
-      cylinder uses custom fill,
-      cylinder body fill=yellow!50,
-      cylinder end fill=yellow!50,
       shape border rotate=90,
       aspect=0.25,
       draw
     }
     ]
     
-    
+    \node (c1) [draw]{Registration Web Page};
+	\node (c2) [draw, right = of c1]{Tuition Web Page};    
+	\node (c3) [draw, right = of c2]{Confirmation Web Page};
+	
+	\node (c4) [database, below left = of c1]{Course Description};
+	
+	\node (c5) [draw, below = of c1]{Registration Administration};
+
+	\node (c6) [draw, below = of c2]{Tuition Administration};
+
+	\node (c7) [draw, below = of c5]{System Administration};
+		
+	\node (c8) [database, below = of c6]{Student Records Database};
+
+	\draw [->]  (c4) -- (c1);
+	\draw [->]  (c1) -- (c2);
+	\draw [->]  (c2) -- (c3);
+	\draw [<->] (c1) -- (c5);
+	\draw [<->] (c5) -- (c7);
+	\draw [<->] (c6) -- (c7);
+	\draw [<->] (c6) -- (c5);
+	\draw [<->] (c2) -- (c6);
+	\draw [->]  (c8) -- (c3);
+	\draw [<->] (c7) -- (c8);
 
 \end{tikzpicture}
 
