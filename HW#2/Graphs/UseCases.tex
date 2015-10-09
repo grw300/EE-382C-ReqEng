@@ -1,58 +1,30 @@
 \documentclass[x11names]{article}
-
+\usepackage{tikz}
 \usepackage{verbatim}
 \usepackage[active,tightpage]{preview}
-\setlength\PreviewBorder{5mm}%
-\usepackage{pst-uml}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5mm}
+\usepackage{tikz-uml} 
+
 
 \begin{document}
 
-\begin{center}
+\begin{tikzpicture}
+\begin{umlsystem}[x=4, y=0]{Course Registration System} 
+\umlusecase[x=1,y=-3.85, width=2.5cm]{Importing Course Descriptions} 
+\umlusecase[x=4, y=-6, width=2.5cm]{Registering/Paying Tuition}
+\umlusecase[x=4, y=-2, width=2.5cm]{Advising Registration}
+\end{umlsystem}
 
-\begin{pspicture}(0,0.5)(15,13.5)%\psgrid
-\psset{framesep=0}
+\umlactor[x=13, y=-1.5]{Advisor} 
+\umlactor[y=-3]{Admin} 
+\umlactor[x=13, y=-6.5]{Student}
 
-\psframe[linewidth=0.5pt, linestyle=dashed](3,14)(12,0.5)
-\rput(7.5,1){\Large Système à développer}
+\umlassoc{Admin}{usecase-1} 
+\umlassoc{Student}{usecase-2}
+\umlassoc{Advisor}{usecase-3}
 
-		 \rput(1,12){\rnode{acCL}{\umlActor{Client}}}
-		 \rput(1,6){\rnode{acSC}{\umlActor{Service\\Clientèle}}}
-		 \rput(14,4){\rnode{acST}{\umlActor{Service\\Technique}}}
-		 \rput(14,11.5){\rnode{acSU}{\umlActor{Superviseur}}}
-		 %
-		 %
-		 % \umlPutCase{5,13}{VISU}{\\[0mm]Visualiser\\[0mm]}
-		 \umlPutCase{5,13}{VISU}{Visualiser}
-		 \umlPutCase{5,5}{SR}{Saisir\\Risques}
-		 \umlPutCase{5,3}{SD}{Saisir\\Demandes}
-		 \umlPutCase{5,8}{RD}{Routage\\demandes}
-		 \umlPutCase{10,10}{ICB}{%
-			6 2 EXEMPLE DE DIAGRAMME DES CAS D’UTILISATION
-			 Identifier\\
-			 contraintes\\
-			 bloquantes}
- \umlPutCase{10,3}{MR}{Modifie\\ Réseau }
- \umlPutCase{5,11}{VAD}{Vérifier\\ acceptation\\demande }
- \umlPutCase{10,5}{IR}{Indiquer\\risques }
-\umlPutCase{10,13}{PM}{Préparer\\modif .}
 
- \ncline{acCL}{VAD}
-\ncline{acCL}{VISU}
-\ncline{acSC}{SR}
-\ncline{acSC}{SD}
- \ncline{acSC}{RD}
-\ncline{acSU}{ICB}
- \ncline{acSU}{PM}
- \ncline{acST}{IR}
-\ncline{acST}{MR}
+\end{tikzpicture}
 
-		\ncline{RD}{ICB}\naput[nrot=:U]{\umlStereoType{uses}}
-	\ncputicon{umlHerit}
-\ncline{IR}{SR}\nbput[nrot=:D,npos=0.65]{\umlStereoType{uses}}
-\ncputicon{umlHerit}
-\end{pspicture}
-		52 }%end resizeORscalebox
-	53 \end{center}
-54
-55
-56  \end{document}
+\end{document}
