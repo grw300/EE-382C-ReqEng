@@ -10,6 +10,7 @@
 \usepackage{url}
 \usepackage{xcolor}
 \usepackage{sectsty}
+\usepackage{longtable}
 
 \subsectionfont{\color{blue}}  % sets colour of chapters
 \sectionfont{\color{cyan}}
@@ -29,7 +30,8 @@
 % Everything after this becomes content
 % Replace the text between curly brackets with your own
 \begin{titlepage}
-\title{{\Huge \color{cyan}Project Name: Distributed Timesheet}}
+\title{{\Huge Session Plan}\\
+	{\huge \color{cyan}Project Name: Distributed Timesheet}}
 \author{{\huge{\color{blue}Customer Name: ACME}}\\
 	\\{\small Requirements Engineers:}
 \\Robert Pate\\robert.pate@gmail.com\\\\Neel Shah\\neel.shah.528@gmail.com\\\\Adam Whipple\\awhipple@utexas.edu\\\\Gregory Williams\\grw300@gmail.com}
@@ -52,20 +54,190 @@ Managers have access to simple reports displaying how much time employees have t
 
 The system will also support superusers who can add or subtract client codes from individual workers’ timesheets, edit timesheets directly, send them back to the worker for editing, or export the time data into a bookkeeping / invoicing system such as Quickbooks (.iif), Peachtree, ADP, and common formats such as excel, XML, and CSV. The system will have basic reporting capabilities for the first release.
 
-\section{Packaging}
+\section{Session Plans}
 
-Ultimately, this system will be part of a suite of products for B2B SaaS packaging.  Therefore, the system needs to be easily implemented, highly maintainable, work on a variety of machines: web (Firefox, Chrome, IE?/Edge, Safari).  The system should also have a web portal where customers can register and purchase a plan.  For the first release, the product will be free.
+\subsection{}
 
-\section{Future Development}
+{\renewcommand{\arraystretch}{1.1}
+\begin{longtable}{|p{0.4\textwidth}|p{0.5\textwidth}|}
+\hline
+Session Unique Number                & 1 \\
+\hline
+Session Date (or \# in Session Order)& 1 \\
+\hline
+Session Coverage of Planned Scope    & High-level Product Overview \\
+\hline
+Stakeholder Name                     & Product Owner - Tom Shreck \\
+\hline
+Requirements Engineer                & Neel Shah \\
+\hline
+Scribe                               & Adam Whipple \\
+\hline
+Session Goals
+&\circ Identify key functions with descriptions.\\
+&\circ Identify Business Requirements.\\
+&\circ Identify key scenarios.\\
+&\circ Cover high-level project constraints and justification (Schedule and Budget.)\\
+&\circ Begin to uncover data requirements.\\
+&\circ Understand product roadmap.\\
+&\circ Identify target market.\\
+&\circ Clarify value proposition.\\
+&\circ Key Performance Indicators (KPIs) for production and post-production financial factors.\\
+\hline
+Session Desired Outcomes
+&\circ Key information required to formulate Vision Document. (Functional \& Non-functional)\\
+&\circ Key information required to begin a Project Plan.\\
+&\circ Stakeholder Analysis for Product Owner.\\
+&\circ High-level process diagrams.\\
+&\circ Identify hidden stakeholders.\\
+\hline
+\end{longtable}
+}
 
-A later version of this system could also address timekeeping requirements for government contractors in accordance with DCAA (Defense Contract Audit Agency - \url{http://www.dcaa.mil/DCAAM_7641.90.pdf}) however, this is out of scope for the first release.  Also intended for later release is a Desktop (macOS, Windows) application and a mobile application Mobile (Android, iOS).  As features are added in later releases, additional plan levels and costs will be added to the web portal.
+\subsection{}
 
-\section{Competitors}
+{\renewcommand{\arraystretch}{1.1}
+\begin{longtable}{|p{0.4\textwidth}|p{0.5\textwidth}|}
+\hline
+Session Unique Number                & 2 \\
+\hline
+Session Date (or \# in Session Order)& 2 \\
+\hline
+Session Coverage of Planned Scope    & Accounting / HR Functions, Export / Import, Reporting, Key Scenarios \\
+\hline
+Stakeholder Name                     & HR / Accounting SME - Kris Liliencrantz \\
+\hline
+Requirements Engineer                & Adam Whipple \\
+\hline
+Scribe                               & Greg Williams\\
+\hline
+Session Goals
+&\circ Understand difficulties with current system and identify what this user envisions to solve them.\\
+&\circ Drill down on key functions with descriptions.\\
+&\circ Expand on key scenarios - uncover additional scenarios.\\
+&\circ Begin layout of timing requirements.\\
+&\circ Expand on data requirements.\\
+&\circ Clarify key expectations, success factors, etc. \\
+&\circ Key decision factors in purchase decision.\\
+&\circ Seek out any unidentified stakeholders.\\
+\hline
+Session Desired Outcomes
+&\circ Additional information required to formulate Vision Document.\\
+&\circ Additional scope (functional).\\
+&\circ Stakeholder expectations (nonfunctional, project) \\
+&\circ Detailed process diagrams from this user’s perspective.\\
+&\circ Expanded detail of data - Data dictionary.\\
+&\circ Stakeholder Analysis for Accounting / HR SME.\\
+\hline
+\end{longtable}
+}
 
-Top 3 competitors include:\\
-Yast - \url{http://www.yast.com/}\\
-Harvest - \url{https://www.getharvest.com/}\\
-Toggl - \url{https://www.toggl.com/}
+\subsection{}
+
+{\renewcommand{\arraystretch}{1.1}
+\begin{longtable}{|p{0.4\textwidth}|p{0.5\textwidth}|}
+\hline
+Session Unique Number                & 3 \\
+\hline
+Session Date (or \# in Session Order)& 3 \\
+\hline
+Session Coverage of Planned Scope    & Manager Interface \\
+\hline
+Stakeholder Name                     & Robert Pate - Manager \\
+\hline
+Requirements Engineer                & Greg Williams \\
+\hline
+Scribe                               & Neel Shah \\
+\hline
+Session Goals
+&\circ Understand difficulties with current system and identify what this user envisions to solve them.\\
+&\circ Drill down on key functions with descriptions.\\
+&\circ Expand on key scenarios - uncover additional scenarios.\\
+&\circ Further layout of timing requirements.\\
+&\circ Expand on data requirements.\\
+&\circ Clarify key expectations, success factors, etc. \\
+&\circ Change management / Implementation concerns.\\
+\hline
+Session Desired Outcomes
+&\circ Additional information required to formulate Vision Document.\\
+&\circ Additional scope (functional)\\
+&\circ Stakeholder expectations (nonfunctional, project)\\
+&\circ Detailed process diagrams from this user’s perspective.\\
+&\circ Expanded detail for data dictionary.\\
+&\circ Stakeholder Analysis for Manager SME.\\
+\hline
+\end{longtable}
+}
+
+\subsection{}
+
+{\renewcommand{\arraystretch}{1.1}
+\begin{longtable}{|p{0.4\textwidth}|p{0.5\textwidth}|}
+\hline
+Session Unique Number                & 4 \\
+\hline
+Session Date (or \# in Session Order)& 4 \\
+\hline
+Session Coverage of Planned Scope    & User Interface, Performance, Expectations \\
+\hline
+Stakeholder Name                     & Adam Whipple \\
+\hline
+Requirements Engineer                & Greg Williams\\
+\hline
+Scribe                               & Robert Pate \\
+\hline
+Session Goals
+&\circ Understand difficulties with current system and identify what this user envisions to solve them.\\
+&\circ Drill down on key functions with descriptions.\\
+&\circ Expand on key scenarios - uncover additional scenarios.\\
+&\circ Further layout of timing requirements.\\
+&\circ Expand on data requirements.\\
+&\circ Clarify key expectations, success factors, etc.\\
+&\circ Change management / Implementation concerns.\\
+\hline
+Session Desired Outcomes
+&\circ Additional information required to formulate Vision Document.\\
+&\circ Additional scope (functional)\\
+&\circ Stakeholder expectations (nonfunctional, project)\\ 
+&\circ Detailed process diagrams from this user’s perspective.\\
+&\circ Expanded detail for data dictionary.\\
+\hline
+\end{longtable}
+}
+
+\subsection{}
+
+{\renewcommand{\arraystretch}{1.1}
+\begin{longtable}{|p{0.4\textwidth}|p{0.5\textwidth}|}
+\hline
+Session Unique Number                & 5 \\
+\hline
+Session Date (or \# in Session Order)& 5 \\
+\hline
+Session Coverage of Planned Scope    & Platform Constraints, Legacy System Usage, Network Constraints, Language \\
+\hline
+Stakeholder Name                     & Neel Shah - Developer \\
+\hline
+Requirements Engineer                & Robert Pate \\
+\hline
+Scribe                               & Greg Williams \\
+\hline
+Session Goals
+&\circ Understand and Document platform constraints.\\
+&\circ Identify any Legacy System Usage \\
+&\circ Clarify network constraints \\
+&\circ Code / Language\\
+&\circ Identify Database system / type\\
+&\circ Identify other project related resource requirements (physical machines, tools, licenses, etc.)\\
+\hline
+Session Desired Outcomes
+&\circ Additional information required to formulate Vision Document.\\
+&\circ Additional scope (functional)\\
+&\circ Stakeholder expectations (nonfunctional, project)\\
+&\circ Stakeholder Analysis for Development Group.\\
+\hline
+\end{longtable}
+}
 
 \section{Stakeholders}
 
