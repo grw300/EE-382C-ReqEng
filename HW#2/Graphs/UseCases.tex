@@ -1,0 +1,30 @@
+\documentclass[x11names]{article}
+\usepackage{tikz}
+\usepackage{verbatim}
+\usepackage[active,tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+\setlength\PreviewBorder{5mm}
+\usepackage{tikz-uml} 
+
+
+\begin{document}
+
+\begin{tikzpicture}
+\begin{umlsystem}[x=4, y=0]{Course Registration System} 
+\umlusecase[x=1,y=-3.85, width=2.5cm]{Importing Course Descriptions} 
+\umlusecase[x=4, y=-6, width=2.5cm]{Registering/Paying Tuition}
+\umlusecase[x=4, y=-2, width=2.5cm]{Advising Registration}
+\end{umlsystem}
+
+\umlactor[x=13, y=-1.5]{Advisor} 
+\umlactor[y=-3]{Admin} 
+\umlactor[x=13, y=-6.5]{Student}
+
+\umlassoc{Admin}{usecase-1} 
+\umlassoc{Student}{usecase-2}
+\umlassoc{Advisor}{usecase-3}
+
+
+\end{tikzpicture}
+
+\end{document}
