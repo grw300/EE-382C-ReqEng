@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[margin=3.5cm]{geometry}   
+\usepackage{tikz,amsmath}
+\usepackage{pgfgantt}
+\usepackage{lscape}
+\usepackage{rotating}
+\usepackage{tabularx}
+\usepackage{graphicx}
+\DeclareGraphicsExtensions{.pdf,.png,.jpg}	
+
+\title{Homework III}
+\author{Gregory Williams\\GW4975\\EE 382C Requirements Engineering}
+\date{11/06/2015}
+
+\begin{document}
+	\maketitle
+	
+	\section*{Installation Requirements}
+	\begin{itemize}
+	\item 2 GHz processors\\
+		The administrators expect faster computers.\\
+	\item 2 GB memory\\
+		The administrators expect more computational capability.\\
+	\item support for gigabit networks
+		The administrators expect faster and more robust network communication.\\
+	\end{itemize}
+	The hardware requirements change as better hardware becomes cheaper; better performance in systems is a constant want, if not need. Most local installations can expect the requirements for new hardware to increase with time.
+	\section*{Non-Functional Requirements}
+	\begin{itemize}
+	\item "users expect no more than 2 seconds per transaction for all requests"\\
+		This applies to the system's runtime performance. It may be evaluated by executing system functionality and measuring system responsiveness.\\
+	\item "Federal regulations require payment data to be encrypted when transmitted or stored"\\
+		This applies to the system's communication and data storage. It may be evaluated by grabbing dumps of databases or intercepting (sniffing) network communications of the system and ensuring the content is encrypted.\\
+	\item "intention to extend the system with many additional services in the future"
+		This applies to the system's architecture; an extensible framework must underpin the entire system so that it may be extended at a later date. This could be evaluated by having core pieces of the system implemented as modular plugins to some bare framework, bringing extensibility and demonstrative architecture to the system from the very beginning. If "registration" is a plugin, then it can be shown that additional functionality can be added later.\\
+	\end{itemize}
+
+	\includegraphics[width=\textwidth]{OperationalReferenceModel}
+	\\
+	\includegraphics[width=\textwidth]{TaskDecomposition2}
+	\\
+	\includegraphics[width=\textwidth]{TaskHierarchy}
+	\\
+	\includegraphics[width=\textwidth]{Task}
+	\\
+	\includegraphics[width=\textwidth]{EntityRelationship}
+	\\	
+	\includegraphics[width=\textwidth]{TemporalSequence}
+	\\
+	\section*{Inconsistent Requirements}
+	\section*{Aquire Priorities}
+\end{document}
