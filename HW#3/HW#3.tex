@@ -1,11 +1,6 @@
 \documentclass{article}
-\usepackage[dvipsnames]{xcolor}
-\usepackage[margin=3.5cm]{geometry}   
-\usepackage{tikz,amsmath}
-\usepackage{pgfgantt}
-\usepackage{lscape}
-\usepackage{rotating}
-\usepackage{tabularx}
+\usepackage[margin=3.5cm]{geometry}
+\usepackage{pdfpages}
 \usepackage{graphicx}
 \DeclareGraphicsExtensions{.pdf,.png,.jpg}	
 
@@ -38,16 +33,34 @@
 
 	\includegraphics[width=\textwidth]{OperationalReferenceModel}
 	\\
+	\includegraphics[width=\textwidth]{TaskDecomposition1}
+	\\
 	\includegraphics[width=\textwidth]{TaskDecomposition2}
+	\\
+	\includegraphics[width=\textwidth]{TaskDecomposition3}
+	\\
+	\includegraphics[width=\textwidth]{TaskDecomposition4}
 	\\
 	\includegraphics[width=\textwidth]{TaskHierarchy}
 	\\
-	\includegraphics[width=\textwidth]{Task}
-	\\
+
+	\includepdf[width=\textwidth,pages=-]{Task}
+	\includepdf[width=\textwidth,pages=-]{Task2}
+
 	\includegraphics[width=\textwidth]{EntityRelationship}
-	\\	
+	\\
+	\includegraphics[width=\textwidth]{EntityRelationship2}
+	\\
 	\includegraphics[width=\textwidth]{TemporalSequence}
 	\\
+	
 	\section*{Inconsistent Requirements}
-	\section*{Aquire Priorities}
+	The type of payment received by the system must support cash, check, or credit card. But the financial record can only hold check or cash. This inconsistency will have to be resolved when the representations are synthesized.
+	\section*{Additional Acquirement Priorities}
+	\begin{itemize}
+	\item \texttt{Admin\_TD\_003}\\
+		The Task Decomposition does not indicate any of the concrete requirements in how students and administrators will validate that the conflicts have indeed been resolved. I would want to follow up with the administration and with current students on their expectations for how the conflicts are communicated if they exists, and if there is any desired functionality or interaction expectations in both the no-conflict case and the conflict case.\\
+	\item \texttt{Admin\_TS\_001}\\
+		The Temporal Sequence Diagram does not include any information about what administrators need to do if/when the income constraint prevents a class from being offered that students are currently registered for. We would need to acquire the timing and task that administrators would take in the case that a class is canceled.\\
+	\end{itemize}
 \end{document}
