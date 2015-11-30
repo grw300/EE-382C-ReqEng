@@ -1,0 +1,50 @@
+-- Course Registration example for ReqEng Assignment 4
+
+model CourseRegistration_2
+
+-- classes
+
+class University
+end
+
+class Student
+operations
+  drop(c : Course)
+end
+
+
+class Course
+attributes
+  isFull : Boolean
+end
+
+
+
+-- associations
+
+association EnrolledAtUniversity between
+  Student[*] role students
+  University[0..1] role isEnrolledAt
+end
+
+association TakingCourse between
+  Student[*] role studentsEnrolled
+  Course[*] role takingCourses
+end
+
+
+-- OCL constraints
+constraints
+
+context Student
+	inv studentEnrolledInUniversity: self.isEnrolledAt.students->includes(self)
+
+context Student :: drop(c : Course)
+	pre studentIsRegistered: self.takingCourses->includes(c)
+	pre studentHasMoreThanOneClass: self.takingCourses->size() > 1
+	post studentIsNotRegistered: not self.takingCourses->includes(c)
+	post studentDidNotDropOtherCoursesRegistered: self.takingCourses->including(c) = self.takingCourses@pre
+	post droppedCourseNotFull: c.isFull = false
+	post studentStillEnrolledInUniversity: self.isEnrolledAt = self.isEnrolledAt@pre
+	post onlyThisStudentWasRemoved: c.studentsEnrolled->including(self) = c.studentsEnrolled@pre
+	

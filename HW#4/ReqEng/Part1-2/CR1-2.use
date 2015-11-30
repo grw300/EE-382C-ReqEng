@@ -1,0 +1,38 @@
+-- Course Registration example for ReqEng Assignment 4
+
+model CourseRegistration_1_2
+
+
+-- classes
+
+class University
+end
+
+class Student
+attributes
+  id : String
+end
+
+
+-- associations
+
+association UndergraduateStudentAt between
+  Student[*] role undergraduates
+  University[0..1] role undergraduateAt
+end
+
+association GraduateStudentAt between
+  Student[*] role graduates
+  University[0..1] role graduateAt
+end
+
+
+-- OCL constraints
+constraints
+
+context University
+    -- A student may be a GraduateStudent
+	-- or an UndergraduateStudent
+    -- but not both
+    inv StudentIsGradOrUndergradNotBoth:
+       self.undergraduates->intersection(self.graduates)->isEmpty()
